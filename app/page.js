@@ -30,7 +30,7 @@ export default function Home() {
       p.title.toLowerCase().includes(searchText.toLowerCase())
     )
     .filter((p) =>
-      category ? p.category === category : true
+      category.length > 0 ? p.category === category : true
     )
     .sort((a, b) => {
       if (sortBy === "price-asc") 
